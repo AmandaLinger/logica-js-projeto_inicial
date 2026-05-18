@@ -1,15 +1,13 @@
-alert ('Boas vindas ao nosso site')
+alert('Boas vindas ao jogo do número')
 
-let mensagemDeErro = 'Erro! Preencha todos os campos'
-alert(mensagemDeErro);
+let numeroSecreto = 2
 
+console.log(numeroSecreto)
 
-let nome1 = prompt("Digite seu nome")
-let idade1 = prompt('Digite sua idade')
+let chute = prompt('Escolha um número de 1 a 10');
 
-
-if(idade1 >= 18){
-    console.log('Já pode tirar carteira')
+if (chute == numeroSecreto){
+    alert(`Isso ai, Você descobriu o número secreto ${numeroSecreto}`)
 } else {
-    console.log('Você ainda é menor de idade')
+    alert()
 }
