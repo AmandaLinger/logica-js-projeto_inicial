@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        let tela = document.querySelector('canvas')
+        let pincel = tela.getContext('2d')
+
+        pincel.fillStyle = 'lightgrey'
+        pincel.fillRect(0, 0, 600, 400);
+
+
+
+        pincel.fillStyle = 'red'
+        pincel.beginPath()
+        pincel.moveTo(300,200)
+        pincel.arc(300,200, 10, 0, 2*3.14)
+        pincel.fill()
+
+        pincel.fillStyle = 'yellow'
+        pincel.beginPath()
+        pincel.moveTo(300, 180)
+        pincel.arc(300,180, 10, 0, 2*3.14)
+        pincel.fill()
+
+        pincel.fillStyle = 'black'
+        pincel.beginPath()
+        pincel.moveTo(320,200)
+        pincel.arc(320,200, 10, 0, 2*3.14)
+        pincel.fill()
+
+        pincel.fillStyle = 'orange'
+        pincel.beginPath()
+        pincel.moveTo(280,200)
+        pincel.arc(280,200, 10, 0, 2*3.14)
+        pincel.fill()
+
+        pincel.fillStyle = 'blue'
+        pincel.beginPath()
+        pincel.moveTo(300, 320)
+        pincel.arc(300, 220, 10, 0, 2*3.14)
+        pincel.fill()
+    </script>
+</body>
+</html>
