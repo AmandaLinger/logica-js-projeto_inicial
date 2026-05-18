@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <canvas width="800" height="500"></canvas>
+
+
+    <script>
+        let tela = document.querySelector("canvas");
+        
+        var pincel = tela.getContext('2d')
+
+        pincel.fillStyle = 'lightgrey' //define a cor
+        pincel.fillRect(0, 0, 800, 500); //define a posição do retangulo
+
+
+        pincel.fillStyle = 'pink'
+        pincel.fillRect(0, 0 , 233 , 500);
+
+        pincel.fillStyle = 'black'
+        pincel.fillRect(580, 0, 233 ,500)
+
+        pincel.fillStyle = 'blue'
+        pincel.beginPath(); //usado para iniciar um novo caminho de desenho e resetar o caminho atual
+        pincel.moveTo(400, 250) //movendo o pincel para o meio 
+        pincel.lineTo(233, 500) //criando uma linha passando a posição x e y
+        pincel.lineTo(580 , 500)//criando uma linha passando a posição x e y
+        pincel.fill(); // preenchendo o elemento
+
+
+        pincel.fillStyle = 'white'
+        pincel.beginPath(); //começa um novo caminho
+        pincel.arc(400, 250, 50 , 0 , 2*3.14) //para traçar um novo circulo
+        pincel.fill();
+    </script>
+</body>
+</html>

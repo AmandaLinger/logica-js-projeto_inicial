@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esquadro</title>
+</head>
+<body>
+    <canvas width="800" height="500"></canvas>
+
+    <script>
+        let areaDisponivel= document.querySelector('canvas')
+
+        pincel = areaDisponivel.getContext('2d')
+
+        pincel.fillStyle = 'lightgrey'
+        pincel.fillRect(0,0,800,500);
+
+        pincel.fillStyle = 'black'
+        pincel.beginPath()
+        pincel.moveTo(50,50)
+        pincel.lineTo(50,450)
+        pincel.lineTo(450,450)
+        pincel.fill();
+
+
+
+
+        pincel.fillStyle = 'white'
+        pincel.beginPath();
+        pincel.moveTo(100, 150)
+        pincel.lineTo(100, 410)
+        pincel.lineTo(350,410)
+        pincel.fill();
+    </script>
+</body>
+</html>
