@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        let tela = document.querySelector('canvas')
+        let pincel = tela.getContext('2d')
+
+        function desenhaQuadro(texto, x, y){
+            pincel.fillStyle = 'lightgrey'
+            pincel.fillRect(0,0,600,400)
+
+            pincel.beginPath()
+            pincel.moveTo(250,200)
+            pincel.font='20px Georgia';
+            pincel.fillStyle='black';
+            pincel.fillText(texto, x, y); 
+        }
+        desenhaQuadro('Qual é a fração?', 50, 30)
+    </script>
+</body>
+</html>
