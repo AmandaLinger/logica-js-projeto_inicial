@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando evento de click</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        let tela = document.querySelector('canvas')
+        let pincel = tela.getContext('2d')
+
+        pincel.fillStyle = 'lightgrey'
+        pincel.fillRect(0,0,600,400)
+
+        function desenhaCirculo(evento){
+            let x = evento.pageX - tela.offsetLeft;// o comando pageX pega a coordemanda do click no eixo X
+            let y = evento.pageY - tela.offsetTop; //o comando 'offsetTop' tira o espaçamento de cima
+
+            pincel.fillStyle = 'red'
+            pincel.beginPath()
+            pincel.arc(x, y, 10, 0, 2*3.14)
+            pincel.fill()
+            console.log(x + ',' + y)
+        }
+
+        tela.onclick = desenhaCirculo; //o navegador vai ficar "escutando" a variavel tela e  ao flicar, vai executar a função
+    </script>
+</body>
+</html>
