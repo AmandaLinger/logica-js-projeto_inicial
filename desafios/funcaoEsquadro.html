@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando função para triangulos</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        let tela = document.querySelector('canvas')
+        let pincel = tela.getContext('2d')
+
+        pincel.fillStyle =  'lightgrey'
+        pincel.fillRect(0,0,600,400)
+
+        function desenhaEsquadro(inicio,fim,xa,ya,xc,yc,cor){
+
+
+            pincel.fillStyle = cor
+            pincel.beginPath()
+            pincel.moveTo(inicio,fim)
+            pincel.lineTo(xa,ya)
+            pincel.lineTo(xc,yc)
+            pincel.fill()
+        }
+        desenhaEsquadro(50,50,50,350,400,350,'black')
+        desenhaEsquadro(80,100,80,320,320,320,'white')
+    </script>
+</body>
+</html>
